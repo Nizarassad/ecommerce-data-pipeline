@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edp"
+version = "0.1.0"
+description = "E-commerce ELT data pipeline: generate -> ingest -> transform -> quality, on DuckDB."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Nizar Assad" }]
+dependencies = [
+    "duckdb>=1.0",
+    "pandas>=2.0",
+    "pydantic>=2.0",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.5",
+    "pytest>=8.0",
+]
+# Optional orchestrator. The pipeline runs fine WITHOUT this (topological fallback).
+prefect = [
+    "prefect>=2.0",
+]
+
+[project.scripts]
+edp = "edp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

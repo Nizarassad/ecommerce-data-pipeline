@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Test / tooling caches
+.pytest_cache/
+.ruff_cache/
+.coverage
+
+# Pipeline artifacts (regenerated deterministically by `python -m edp.run`)
+data/raw/
+data/*.duckdb
+data/warehouse.duckdb
+
+# Prefect local state
+.prefect/
+prefect.db
+
+# OS
+.DS_Store
