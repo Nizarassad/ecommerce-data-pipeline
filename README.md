@@ -18,6 +18,12 @@ generate ──▶ ingest (EL) ──▶ transform (T) ──▶ quality tests �
 
 ---
 
+## Fast business-automation example
+
+If you are here for the **small-business automation** use case rather than the warehouse architecture, start with [`examples/report_automation/`](examples/report_automation/README.md).
+
+It takes two synthetic recurring exports (orders + payments), cleans inconsistent keys, removes a duplicate payment, excludes a failed payment, reconciles amounts, detects an orphan payment, separates exceptions, and emits a compact management summary. It is intentionally small enough to understand quickly and uses the same reliability principles as the larger pipeline below.
+
 ## Why this repo exists
 
 It's the **data-engineering half** of a data/ML portfolio: the unglamorous,
