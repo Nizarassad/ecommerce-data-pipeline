@@ -1,0 +1,5 @@
+order_id,customer,order_total,paid_total,balance,reconciliation_status
+ORD-1002,Blue Market,840.5,800.5,40.0,underpaid
+ORD-1003,Cedar Studio,499.99,550.0,-50.01,overpaid
+ORD-1004,Delta Retail,300.0,0.0,300.0,unpaid
+ORD-1005,Evergreen Shop,725.0,0.0,725.0,unpaid
