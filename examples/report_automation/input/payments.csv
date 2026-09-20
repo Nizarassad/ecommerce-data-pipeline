@@ -1,0 +1,7 @@
+payment_id,order_id,amount_paid,status
+PAY-001,ORD-1001,1250.00,paid
+PAY-002, ord-1002 ,800.50,PAID
+PAY-003,ORD-1003,550.00,paid
+PAY-004,ORD-1005,725.00,failed
+PAY-005,ORD-9999,99.00,paid
+PAY-005,ORD-9999,99.00,paid
